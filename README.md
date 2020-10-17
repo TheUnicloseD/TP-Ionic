@@ -156,8 +156,8 @@ export const Menu: React.FC = () => (
 
 
 export default Menu;
-
 `
+
 On s'intéresse ici au fait que Ionic permettent d'inclure ces components dans nos pages. Dans notre cas, nous allons accéder à ce menu depuis la page "Home"
 
 Importer le component qu'on vient de créer: `import Menu from '../components/Menu';`
