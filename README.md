@@ -128,10 +128,10 @@ Voila à quoi devrait ressembler votre page : (Insérer photo de la page les ami
 Nous allons maintenant créer un menu à notre application. Pour cela, créer une nouvelle page "Menu.tsx" dans le dossier components. 
 Voice le code à mettre dans la page : 
 
-`import React from 'react';`
-`import { IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonRouterOutlet } from '@ionic/react';`
-
 `
+import React from 'react';
+import { IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonRouterOutlet } from '@ionic/react';
+
 export const Menu: React.FC = () => (
   <>
     <IonMenu side="start" menuId="first" contentId="content1">
@@ -143,7 +143,7 @@ export const Menu: React.FC = () => (
       <IonContent>
         <IonList>
           <IonItem>Profil</IonItem>
-          <IonItem>Page 3</IonItem>
+          <IonItem>Page 3 </IonItem>
           <IonItem>Page 4</IonItem>
           <IonItem>Page 5</IonItem>
           <IonItem>Page 6</IonItem>
@@ -152,10 +152,12 @@ export const Menu: React.FC = () => (
     </IonMenu>
     <IonRouterOutlet id="content1"></IonRouterOutlet>
  </>
-);`
+);
 
-`export default Menu;`
 
+export default Menu;
+
+`
 On s'intéresse ici au fait que Ionic permettent d'inclure ces components dans nos pages. Dans notre cas, nous allons accéder à ce menu depuis la page "Home"
 
 Importer le component qu'on vient de créer: `import Menu from '../components/Menu';`
