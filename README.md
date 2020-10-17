@@ -123,7 +123,7 @@ Copier ce code dans votre page Profil.tsx à la place du code existant :
     </IonPage>
 ```
     
-Les components <IonGrid>,<IonCol> et <IonRow> permettent de présenter la page comme-ci : 
+Les components `<IonGrid>`,`<IonCol>` et `<IonRow>` permettent de présenter la page comme-ci : 
 
 ![alt tag](https://user-images.githubusercontent.com/47526337/96347644-64b18000-10a3-11eb-905d-71bdb117a287.PNG)
 
