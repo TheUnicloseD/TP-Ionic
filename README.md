@@ -163,8 +163,7 @@ Importer le component qu'on vient de créer: `import Menu from '../components/Me
 - Ajouter le menu que l'on vient de créer dans la toolbar de la page Home 
 
 Astuce : Regarder comment l'autre component ExploreContainer est intégrée. 
-Astuce2 : https://ionicframework.com/docs/api/menu-button
-Pour cela, Ionic propose la balise <IonMenuButton>
+Astuce2 : Pour cela, Ionic propose la balise <IonMenuButton> (https://ionicframework.com/docs/api/buttons)
 
 - Utiliser les ions Item pour créer un chemin entre le menu et la page Profil (https://ionicframework.com/docs/api/item)
 
