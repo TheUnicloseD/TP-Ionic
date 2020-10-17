@@ -10,13 +10,13 @@ npm/NodeJS : https://nodejs.org/en/
 
 3. Créer une 1ere application 
 
-- Mettez vous dans le dossier ou vous voulez créer l'appli 
+**Mettez vous dans le dossier ou vous voulez créer l'appli** 
 
-`ionic start "nomApp" blank`
+`ionic start nomApp blank`
 
-- Dans le choix de Framework, choisir "React" 
+**Dans le choix de Framework, choisir "React"** 
 
-![](C:\Users\romai\Documents\Cours\IHM\Capture.PNG)
+
 
 Ionic va vous demander si vous souhaitez créer un compte gratuit, répondez "Non"
 
