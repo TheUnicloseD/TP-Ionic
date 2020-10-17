@@ -7,8 +7,6 @@ npm/NodeJS : https://nodejs.org/en/
 2. Installer Ionic 
 
 `npm install -g ionic`
-`npm install axios`
-
 
 3. Créer une 1ere application 
 
@@ -24,13 +22,19 @@ Ionic va vous demander si vous souhaitez créer un compte gratuit, répondez "No
 
 4. Lancer l'application 
 
-- Mettez vous dans le dossier que vous venez de créer 
+- **Mettez vous dans le dossier que vous venez de créer** 
 
 `ionic serve`
 
-Vous pouvez maintenant ouvrir votre environnement de développer et regarder la structure de votre application. 
+Pour certain, la page de l'appli s'ouvre automatiquement dans le navigateur. Si ce n'est pas le cas vous pouvez l'ouvrir via http:://localhost:8100
 
-Dans le dossier "pages" se trouvent les pages ou onglets de votre application. Nous allons commencer par créer une nouvelle page pour notre application. 
+*Astuce : Activez le mode "téléphone" pour mieux visualiser l'application*
+
+Vous pouvez maintenant ouvrir votre environnement de développement et regarder la structure de votre application. 
+
+Tout ce qui nous intéresse se situe dans le dosseir "src"
+
+Dans le sous-dossier "pages" de se trouvent les pages ou onglets de votre application. Nous allons commencer par créer une nouvelle page pour notre application. 
 
 5. Créer 1 nouvelle page 
 
@@ -52,7 +56,7 @@ Pour cela, utiliser les components `IonTabs` (https://ionicframework.com/docs/ap
 
 Les boutons doivent être créée dans la page "App.tsx" pour qu'il soit accessible depuis toutes les pages de l'application. 
 
-<IonIcon icon={} /> permet d'avoir accès à tout les icones que propose Ionic. Ceux-ci sont accessibles à cette adresse : https://ionicframework.com/docs/v3/ionicons/
+*Astuce <IonIcon icon={} /> permet d'avoir accès à tout les icones que propose Ionic. Ceux-ci sont accessibles à cette adresse : https://ionicframework.com/docs/v3/ionicons/*
 
 Pensez à importer les nouveaux components que vous allez utiliser. 
 Pour importer les icones : `import { "nomIcon" } from 'ionicons/icons';`
@@ -71,15 +75,51 @@ Vous pouvez voir maintenant sur votre appli que lors de l'appui sur un bouton, l
 
 7. Remplir la page Profil 
 
-Nous allons créer cette page comme si c'était une page de connexion.
-Utilisons pour une bonne présentation les components de Ionic "Grid" "Row" "Col"
-https://ionicframework.com/docs/api/grid
+`
+<IonPage>
+    <IonHeader>
+      <IonToolbar>
+        
+      </IonToolbar>
+    </IonHeader>
+    <IonContent fullscreen className="ion-padding ion-text-center">
+        <IonGrid>
+    <IonRow>
+        <IonCol>
+        
+        </IonCol>
+    </IonRow>
+    <IonRow>
+        <IonCol>
+          <IonItem>
+            
+          </IonItem>
+        </IonCol>
+      </IonRow>
+      <IonRow>
+           <IonCol>
+           <IonItem>
+             
+           </IonItem>
+           </IonCol>
+         </IonRow>
+         <IonRow>
+            <IonCol>
+              
+            </IonCol>
+          </IonRow>
+          </IonGrid>
+      </IonContent>
+    </IonPage>
+    `
+    
+Le <IonHeader> comporte le header de la page tandis que le <IonContent> comporte le corps de la page. 
 
 - Ajouter un titre "Login" à la page de couleur "danger" (https://ionicframework.com/docs/api/title)
 - Ajouter un icone "personCircle" sur la page avec un fontSize de 60px.
-- Ajouter un input de type "Email"
+- Ajouter un input de type "Email" (https://ionicframework.com/docs/api/input)
 - Ajouter un input de type "Password"
-- Créez un bouton cliquable "LOGIN"
+- Créez un bouton cliquable "LOGIN" (https://ionicframework.com/docs/api/button)
 
 Voila à quoi devrait ressembler votre page : (Insérer photo de la page les amis)
  
@@ -91,27 +131,28 @@ Voice le code à mettre dans la page :
 `import React from 'react';`
 `import { IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonRouterOutlet } from '@ionic/react';`
 
-`export const Menu: React.FC = () => (`
-  `<>`
-    `<IonMenu side="start" menuId="first" contentId="content1">`
-      `<IonHeader>`
-        `<IonToolbar color="primary">`
-          `<IonTitle>Start Menu</IonTitle>`
-        `</IonToolbar>`
-      `</IonHeader>`
-      `<IonContent>`
-        `<IonList>`
-          `<IonItem>Profil</IonItem>`
-          `<IonItem>Page 3</IonItem>`
-          `<IonItem>Page 4</IonItem>`
-          `<IonItem>Page 5</IonItem>`
-          `<IonItem>Page 6</IonItem>`
-        `</IonList>`
-      `</IonContent>`
-    `</IonMenu>`
-    `<IonRouterOutlet id="content1"></IonRouterOutlet>`
- `</>`
-`);`
+`
+export const Menu: React.FC = () => (
+  <>
+    <IonMenu side="start" menuId="first" contentId="content1">
+      <IonHeader>
+        <IonToolbar color="primary">
+          <IonTitle>Start Menu</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <IonList>
+          <IonItem>Profil</IonItem>
+          <IonItem>Page 3</IonItem>
+          <IonItem>Page 4</IonItem>
+          <IonItem>Page 5</IonItem>
+          <IonItem>Page 6</IonItem>
+        </IonList>
+      </IonContent>
+    </IonMenu>
+    <IonRouterOutlet id="content1"></IonRouterOutlet>
+ </>
+);`
 
 `export default Menu;`
 
