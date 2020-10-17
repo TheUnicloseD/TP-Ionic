@@ -137,7 +137,7 @@ Dans notre cas vous pouvez voir que nous avons 4 lignes qui ont chacune 1 colonn
 
 Voila à quoi devrait ressembler votre page : 
 
-
+![alt tag](https://user-images.githubusercontent.com/47526337/96347645-654a1680-10a3-11eb-8873-b5fdb11924aa.png)
  
 9. Créer un menu 
 
