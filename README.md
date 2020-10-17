@@ -16,7 +16,7 @@ npm/NodeJS : https://nodejs.org/en/
 
 **Dans le choix de Framework, choisir "React"** 
 
-
+![alt tag](https://user-images.githubusercontent.com/47526337/96346560-abe84280-109c-11eb-8148-407867a6d66a.PNG)
 
 Ionic va vous demander si vous souhaitez créer un compte gratuit, répondez "Non"
 
