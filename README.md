@@ -18,50 +18,55 @@ npm/NodeJS : https://nodejs.org/en/
 
 ![alt tag](https://user-images.githubusercontent.com/47526337/96346560-abe84280-109c-11eb-8148-407867a6d66a.PNG)
 
-Ionic va vous demander si vous souhaitez créer un compte gratuit, répondez "Non"
+Pour certain, Ionic va vous demander si vous souhaitez créer un compte gratuit. Dans ce cas, répondez "Non"
 
 4. Lancer l'application 
 
-- **Mettez vous dans le dossier que vous venez de créer** 
+**Mettez vous dans le dossier que vous venez de créer** 
 
 `ionic serve`
 
 Pour certain, la page de l'appli s'ouvre automatiquement dans le navigateur. Si ce n'est pas le cas vous pouvez l'ouvrir via http:://localhost:8100
 
-*Astuce : Activez le mode "téléphone" pour mieux visualiser l'application*
+*Astuce : Activez le mode "téléphone" dans votre navigateur pour mieux visualiser l'application*
 
-Vous pouvez maintenant ouvrir votre environnement de développement et regarder la structure de votre application. 
+**Vous pouvez maintenant ouvrir votre environnement de développement et regarder la structure de votre application.** 
 
-Tout ce qui nous intéresse se situe dans le dosseir "src"
+Tout ce qui nous intéresse se situe dans le dossier "src"
 
-Dans le sous-dossier "pages" de se trouvent les pages ou onglets de votre application. Nous allons commencer par créer une nouvelle page pour notre application. 
+Dans le sous-dossier "pages" se trouvent les pages ou onglets de votre application. Nous allons commencer par créer une nouvelle page pour notre application. 
 
-5. Créer 1 nouvelle page 
+5. Créer une nouvelle page. 
 
-Sous Angular, Ionic propose des commandes qui crée automatiquement ceux dont on a besoin. 
+Sous Angular, Ionic propose des commandes qui crée automatiquement ce dont on a besoin. 
 
 Malheuresement, ce n'est pas encore le cas sous React
 
-Nous devons donc créer une nouvelle page à la main dans le dossier pages. 
+Nous devons donc créer une nouvelle page à la main dans le dossier "pages". 
 
 -Créer la page "Profil.tsx"
 
-Vous pouvez copier le contenu de Home.tsx dans Profil.tsx pour allez plus vite. (Dans ce cas, n'oubliez pas de changer le nom de la constante de cette nouvelle page) 
+Vous pouvez copier le contenu de Home.tsx dans Profil.tsx pour allez plus vite. (Dans ce cas, n'oubliez pas de changer le nom de la constante et de l'export de cette nouvelle page).
 
 6. Créer les onglets 
 
-La page que vous venez de créer va servir de 2ème onglet à l'application (le 1er étant la page principale). 
-Pour relier les pages, il va falloir dans un 1er temps créer 2 boutons qui permettront de switcher entre les 2 onglets (Home et Profil). 
-Pour cela, utiliser les components `IonTabs` (https://ionicframework.com/docs/api/tabs)
+La page que vous venez de créer va servir de 2ème onglet à l'application (le 1er étant la page "Home").
 
-Les boutons doivent être créée dans la page "App.tsx" pour qu'il soit accessible depuis toutes les pages de l'application. 
+Pour relier les 2 pages, il va falloir dans un 1er temps créer 2 boutons qui permettront de switcher entre les 2 onglets (Home et Profil). 
 
-*Astuce <IonIcon icon={} /> permet d'avoir accès à tout les icones que propose Ionic. Ceux-ci sont accessibles à cette adresse : https://ionicframework.com/docs/v3/ionicons/*
+Pour cela, nous allons utiliser les components `IonTabs` (https://ionicframework.com/docs/api/tabs)
 
-Pensez à importer les nouveaux components que vous allez utiliser. 
-Pour importer les icones : `import { "nomIcon" } from 'ionicons/icons';`
+Les boutons doivent être créée dans la page "App.tsx" pour qu'ils soient accessibles depuis toutes les pages de l'application.
 
-C'est normal si votre appli ne marche pas, il faut d'abord créer les routes des onglets que vous venez créer.
+Dans un premier temps, importer les components dont nous allons avoir besoin : `import { IonApp, IonRouterOutlet, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonBadge } from '@ionic/react';`
+
+- Créer les 2 boutons "Home" et "Profil" grâce aux components importé ci-dessus. Ajouter un icone adapté au nom de chaque page
+
+*Astuce <IonIcon icon={} /> permet d'utiliser tout les icones que propose Ionic. Ceux-ci sont accessibles à cette adresse : https://ionicframework.com/docs/v3/ionicons/*
+
+**Pensez à importer les nouveaux icones que vous allez utiliser :** `import { nomIcon } from 'ionicons/icons';`
+
+
 
 7. Créer les routes 
 
