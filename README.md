@@ -90,7 +90,7 @@ Importer les components dont vous allez avoir besoin :
 `import { personCircle } from 'ionicons/icons';`
 
 Copier ce code dans votre page Profil.tsx à la place du code existant :
-`
+```
 <IonPage>
     <IonHeader>
       <IonToolbar>
@@ -121,7 +121,7 @@ Copier ce code dans votre page Profil.tsx à la place du code existant :
      </IonGrid>
     </IonContent>
     </IonPage>
-    `
+```
     
 Les components <IonGrid>,<IonCol> et <IonRow> permettent de présenter la page comme-ci : 
 
@@ -144,7 +144,7 @@ Voila à quoi devrait ressembler votre page :
 Nous allons maintenant créer un components "menu" à notre application. Pour cela, créer une nouvelle page "Menu.tsx" dans le dossier components. 
 Voici le code à mettre dans la page : 
 
-`
+```
 import React from 'react';
 import { IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonRouterOutlet } from '@ionic/react';
 
@@ -171,7 +171,7 @@ export const Menu: React.FC = () => (
 );
 
 export default Menu;
-`
+```
 
 On s'intéresse ici au fait que Ionic permette d'inclure des components dans une page. Dans notre cas, nous allons accéder à ce menu depuis la page "Home"
 
