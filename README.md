@@ -66,74 +66,86 @@ Dans un premier temps, importer les components dont nous allons avoir besoin : `
 
 **Pensez à importer les nouveaux icones que vous allez utiliser :** `import { nomIcon } from 'ionicons/icons';`
 
+**Ne vous inquiétez si vous voyer cette erreur, cela est normal ! En effet, pour fonctionner, les boutons doivent être relié à leurs pages respectives pour fonctionner ! Vous pouvez donc passer à la question suivante !**
 
+![alt tag] (https://user-images.githubusercontent.com/47526337/96346921-b0adf600-109e-11eb-8cc4-b42f0e87b2c6.png)
 
 7. Créer les routes 
 
-Une fois les boutons des onglets créée, il va falloir crée les routes pour les relier à leurs onglets. 
-Vous pouvez voir que la route pour la page "Home" est déjà créer. Pour la relier au bouton, il suffit d'ajouter `href="/home"` dans la balise `<IonTabButton>`. 
-- Grace à cet exemple, créer la route de Profil
+Une fois les boutons créee, il va falloir les reliers à leurs onglets respectifs en utilisant des routes 
+. 
+Vous pouvez voir que la route pour la page "Home" est déjà créer. Pour la relier à son bouton que vous venez de créee, il suffit d'ajouter `href="/home"` dans la balise `<IonTabButton>`.
 
-Astuce : les components doivent être à l'intérieur de la balise `<IonReactRouter>` tandis que <IonRouterOutlet> et les routes doivent être à l'intérieur du component <IonTab>. 
+- Grace à cet exemple, créer la route du bouton Profil. 
 
-Vous pouvez voir maintenant sur votre appli que lors de l'appui sur un bouton, l'URL change et correspond bien à la page où vous avez cliquer. 
+*Astuce : les components `<IonTabs>` doivent être à l'intérieur de la balise `<IonReactRouter>` tandis que `<IonRouterOutlet>` et les routes doivent être à l'intérieur du component `<IonTabs>`.* 
 
-7. Remplir la page Profil 
+Vous pouvez voir maintenant sur votre appli que lors de l'appui sur un des bouton, l'URL change et correspond bien à la page où vous avez cliquer. 
 
+8. Remplir la page Profil
+
+Importer les components dont vous allez avoir besoin : 
+`import { IonContent, IonHeader, IonGrid, IonAlert, IonPage,IonButton, IonTitle, IonToolbar,IonIcon,IonRow,IonCol,IonItem,IonInput,IonLabel } from '@ionic/react';`
+`import React, { useState } from 'react';`
+`import { personCircle } from 'ionicons/icons';`
+
+Copier ce code dans votre page Profil.tsx à la place du code existant :
 `
 <IonPage>
     <IonHeader>
       <IonToolbar>
-        
       </IonToolbar>
     </IonHeader>
-    <IonContent fullscreen className="ion-padding ion-text-center">
-        <IonGrid>
-    <IonRow>
-        <IonCol>
-        
-        </IonCol>
-    </IonRow>
-    <IonRow>
-        <IonCol>
-          <IonItem>
-            
-          </IonItem>
-        </IonCol>
+    <IonContent fullscreen>
+    <IonGrid>
+     <IonRow>
+       <IonCol>
+       </IonCol>
+     </IonRow>
+     <IonRow>
+      <IonCol>
+        <IonItem>
+        </IonItem>
+       </IonCol>
+      </IonRow>
+      <IonRow> 
+       <IonCol>
+        <IonItem>   
+        </IonItem>
+       </IonCol>
       </IonRow>
       <IonRow>
-           <IonCol>
-           <IonItem>
-             
-           </IonItem>
-           </IonCol>
-         </IonRow>
-         <IonRow>
-            <IonCol>
-              
-            </IonCol>
-          </IonRow>
-          </IonGrid>
-      </IonContent>
+       <IonCol>
+       </IonCol>
+        </IonRow>
+     </IonGrid>
+    </IonContent>
     </IonPage>
     `
     
-Le <IonHeader> comporte le header de la page tandis que le <IonContent> comporte le corps de la page. 
+Les components <IonGrid>,<IonCol> et <IonRow> permettent de présenter la page comme-ci : 
 
-- Ajouter un titre "Login" à la page de couleur "danger" (https://ionicframework.com/docs/api/title)
-- Ajouter un icone "personCircle" sur la page avec un fontSize de 60px.
-- Ajouter un input de type "Email" (https://ionicframework.com/docs/api/input)
-- Ajouter un input de type "Password"
-- Créez un bouton cliquable "LOGIN" (https://ionicframework.com/docs/api/button)
+![alt tag]()
 
-Voila à quoi devrait ressembler votre page : (Insérer photo de la page les amis)
+Dans notre cas vous pouvez voir que nous avons 4 lignes qui ont chacune 1 colonne.
+
+- Ajouter un titre "Login" à l'interieur de la toolbar  (https://ionicframework.com/docs/api/title)
+- Ajouter un icone "personCircle" dans la première ligne d'une taille "large".
+- Ajouter un input de type "Email" dans la deuxième ligne. (https://ionicframework.com/docs/api/input)
+- Ajouter un input de type "Password" dans la troisième ligne.
+- Créez un bouton cliquable "LOGIN" dans la quatrième ligne (https://ionicframework.com/docs/api/button)
+
+Voila à quoi devrait ressembler votre page : 
+
+
  
-8. Créer un menu 
+9. Créer un menu 
 
-Nous allons maintenant créer un menu à notre application. Pour cela, créer une nouvelle page "Menu.tsx" dans le dossier components. 
-Voice le code à mettre dans la page : 
+Nous allons maintenant créer un components "menu" à notre application. Pour cela, créer une nouvelle page "Menu.tsx" dans le dossier components. 
+Voici le code à mettre dans la page : 
 
-`import React from 'react';
+`
+import React from 'react';
 import { IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonRouterOutlet } from '@ionic/react';
 
 export const Menu: React.FC = () => (
@@ -158,19 +170,27 @@ export const Menu: React.FC = () => (
  </>
 );
 
+export default Menu;
+`
 
-export default Menu;`
+On s'intéresse ici au fait que Ionic permette d'inclure des components dans une page. Dans notre cas, nous allons accéder à ce menu depuis la page "Home"
 
-On s'intéresse ici au fait que Ionic permettent d'inclure ces components dans nos pages. Dans notre cas, nous allons accéder à ce menu depuis la page "Home"
+Importer le component qu'on vient de créer dans "Home.tsx": `import Menu from '../components/Menu';`
+Importer les components dont nous allons avoir besoin : `import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonMenuButton,IonButtons,IonRouterOutlet } from '@ionic/react';`
 
-Importer le component qu'on vient de créer: `import Menu from '../components/Menu';`
+- Ajouter le bouton du menu que l'on vient de créer dans la toolbar de la page Home.
 
-- Ajouter le menu que l'on vient de créer dans la toolbar de la page Home 
+Pour cela, Ionic propose la balise <IonMenuButton> (https://ionicframework.com/docs/api/buttons)
 
-Astuce : Regarder comment l'autre component ExploreContainer est intégrée. 
-Astuce2 : Pour cela, Ionic propose la balise <IonMenuButton> (https://ionicframework.com/docs/api/buttons)
+*Astuce : Regardez comment l'autre component "ExploreContainer" est intégrée.*
 
 - Utiliser les ions Item pour créer un chemin entre le menu et la page Profil (https://ionicframework.com/docs/api/item)
+*Astuce : Cela marche à l'aide des routes que l'on a crée plûs tot dans le TP. 
+
+Si cela marche, vous devriez avoir accès à la page "Profil" en cliquant sur le bouton Profil de votre menu que vous venez d'integrer à votre page Home.
+
+
+**Merci à vous pour votre Participation !**
 
 
 
