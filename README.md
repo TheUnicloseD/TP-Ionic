@@ -68,7 +68,7 @@ Dans un premier temps, importer les components dont nous allons avoir besoin : `
 
 **Ne vous inquiétez si vous voyer cette erreur, cela est normal ! En effet, pour fonctionner, les boutons doivent être relié à leurs pages respectives pour fonctionner ! Vous pouvez donc passer à la question suivante !**
 
-![alt tag] (https://user-images.githubusercontent.com/47526337/96346921-b0adf600-109e-11eb-8cc4-b42f0e87b2c6.png)
+![alt tag](https://user-images.githubusercontent.com/47526337/96346921-b0adf600-109e-11eb-8cc4-b42f0e87b2c6.png)
 
 7. Créer les routes 
 
@@ -125,7 +125,7 @@ Copier ce code dans votre page Profil.tsx à la place du code existant :
     
 Les components <IonGrid>,<IonCol> et <IonRow> permettent de présenter la page comme-ci : 
 
-![alt tag]()
+![alt tag](https://user-images.githubusercontent.com/47526337/96347644-64b18000-10a3-11eb-905d-71bdb117a287.PNG)
 
 Dans notre cas vous pouvez voir que nous avons 4 lignes qui ont chacune 1 colonne.
 
