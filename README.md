@@ -10,7 +10,7 @@ npm/NodeJS : https://nodejs.org/en/
 
 3. Créer une 1ere application 
 
-**Mettez vous dans le dossier ou vous voulez créer l'appli** 
+**Mettez vous dans le dossier où vous voulez créer l'appli** 
 
 `ionic start nomApp blank`
 
@@ -46,7 +46,7 @@ Nous devons donc créer une nouvelle page à la main dans le dossier "pages".
 
 -Créer la page "Profil.tsx"
 
-Vous pouvez copier le contenu de Home.tsx dans Profil.tsx pour allez plus vite. (Dans ce cas, n'oubliez pas de changer le nom de la constante et de l'export de cette nouvelle page).
+Vous pouvez copier le contenu de Home.tsx dans Profil.tsx pour aller plus vite. (Dans ce cas, n'oubliez pas de changer le nom de la constante et de l'export de cette nouvelle page).
 
 6. Créer les onglets 
 
@@ -56,31 +56,31 @@ Pour relier les 2 pages, il va falloir dans un 1er temps créer 2 boutons qui pe
 
 Pour cela, nous allons utiliser les components `IonTabs` (https://ionicframework.com/docs/api/tabs)
 
-Les boutons doivent être créée dans la page "App.tsx" pour qu'ils soient accessibles depuis toutes les pages de l'application.
+Les boutons doivent être créées dans la page "App.tsx" pour qu'ils soient accessibles depuis toutes les pages de l'application.
 
 Dans un premier temps, importer les components dont nous allons avoir besoin : `import { IonApp, IonRouterOutlet, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonBadge } from '@ionic/react';`
 
-- Créer les 2 boutons "Home" et "Profil" grâce aux components importé ci-dessus. Ajouter un icone adapté au nom de chaque page
+- Créer les 2 boutons "Home" et "Profil" grâce aux components importés ci-dessus. Ajouter un icone adapté au nom de chaque page
 
-*Astuce <IonIcon icon={} /> permet d'utiliser tout les icones que propose Ionic. Ceux-ci sont accessibles à cette adresse : https://ionicframework.com/docs/v3/ionicons/*
+*Astuce `<IonIcon icon={} />` permet d'utiliser tout les icones que propose Ionic. Ceux-ci sont accessibles à cette adresse : https://ionicframework.com/docs/v3/ionicons/*
 
 **Pensez à importer les nouveaux icones que vous allez utiliser :** `import { nomIcon } from 'ionicons/icons';`
 
-**Ne vous inquiétez si vous voyer cette erreur, cela est normal ! En effet, pour fonctionner, les boutons doivent être relié à leurs pages respectives pour fonctionner ! Vous pouvez donc passer à la question suivante !**
+**Ne vous inquiétez si vous voyez cette erreur, cela est normal ! En effet, pour fonctionner, les boutons doivent être reliés à leurs pages respectives pour fonctionner ! Vous pouvez donc passer à la question suivante !**
 
 ![alt tag](https://user-images.githubusercontent.com/47526337/96346921-b0adf600-109e-11eb-8cc4-b42f0e87b2c6.png)
 
 7. Créer les routes 
 
-Une fois les boutons créee, il va falloir les reliers à leurs onglets respectifs en utilisant des routes 
-. 
-Vous pouvez voir que la route pour la page "Home" est déjà créer. Pour la relier à son bouton que vous venez de créee, il suffit d'ajouter `href="/home"` dans la balise `<IonTabButton>`.
+Une fois les boutons créés, il va falloir les relier à leurs onglets respectifs en utilisant des routes.
+ 
+Vous pouvez voir que la route pour la page "Home" est déjà créé. Pour la relier à son bouton que vous venez de créer, il suffit d'ajouter `href="/home"` dans la balise `<IonTabButton>`.
 
 - Grace à cet exemple, créer la route du bouton Profil. 
 
 *Astuce : les components `<IonTabs>` doivent être à l'intérieur de la balise `<IonReactRouter>` tandis que `<IonRouterOutlet>` et les routes doivent être à l'intérieur du component `<IonTabs>`.* 
 
-Vous pouvez voir maintenant sur votre appli que lors de l'appui sur un des bouton, l'URL change et correspond bien à la page où vous avez cliquer. 
+Vous pouvez voir maintenant sur votre appli que lors de l'appui sur un des boutons, l'URL change et correspond bien à la page où vous avez cliquer. 
 
 8. Remplir la page Profil
 
@@ -141,7 +141,7 @@ Voila à quoi devrait ressembler votre page :
  
 9. Créer un menu 
 
-Nous allons maintenant créer un components "menu" à notre application. Pour cela, créer une nouvelle page "Menu.tsx" dans le dossier components. 
+Nous allons maintenant créer un component "menu" à notre application. Pour cela, créer une nouvelle page "Menu.tsx" dans le dossier components. 
 Voici le code à mettre dans la page : 
 
 ```
@@ -182,10 +182,10 @@ Importer les components dont nous allons avoir besoin : `import { IonContent, Io
 
 Pour cela, Ionic propose la balise <IonMenuButton> (https://ionicframework.com/docs/api/buttons)
 
-*Astuce : Regardez comment l'autre component "ExploreContainer" est intégrée.*
+*Astuce : Regardez comment l'autre component "ExploreContainer" est intégré.*
 
 - Utiliser les ions Item pour créer un chemin entre le menu et la page Profil (https://ionicframework.com/docs/api/item)
-*Astuce : Cela marche à l'aide des routes que l'on a crée plûs tot dans le TP. 
+*Astuce : Cela marche comme les routes que l'on a crée plus tot dans le TP. 
 
 Si cela marche, vous devriez avoir accès à la page "Profil" en cliquant sur le bouton Profil de votre menu que vous venez d'integrer à votre page Home.
 
